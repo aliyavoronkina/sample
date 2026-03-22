@@ -26,7 +26,7 @@ jobs:
       run: ./gradlew build
       
   test:
-    runs-on: macos-13
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
     - name: set up JDK 17
@@ -43,4 +43,7 @@ jobs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: 29
+        target: google_apis
+        arch: x86_64
+        profile: Nexus 6
         script: ./gradlew connectedCheck
