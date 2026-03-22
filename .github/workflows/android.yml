@@ -47,3 +47,6 @@ jobs:
         arch: x86_64
         profile: Nexus 6
         script: ./gradlew connectedCheck
+        timeout: 600
+        disable-animations: true
+        emulator-options: -no-snapshot -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none -camera-front none
